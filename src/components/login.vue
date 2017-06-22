@@ -25,6 +25,9 @@
 			submitForm (e) {
 				this.$http.post('some-url', this.query).then((r) => {
 					this.$notify(r.body.message)
+					location.href = r.body.redirectTo
+				}, r => {
+					this.$notify(r.body.message, 'error')
 				})
 			}
 		}
