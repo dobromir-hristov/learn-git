@@ -9,7 +9,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags && conventional-github-releaser"
   },
   "repository": {
     "type": "git",
