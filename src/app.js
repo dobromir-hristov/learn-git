@@ -7,6 +7,6 @@ new Vue({
 	el:'#el',
 	components:{
 		Login,
-		register
+		Register
 	}
 })
