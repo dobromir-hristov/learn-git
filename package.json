@@ -32,7 +32,7 @@
   "standard-version": {
     "scripts": {
       "postchangelog": "node version.js",
-      "precommit": "git add README.md"
+      "postcommit": "git add README.md && git commit --amend"
     }
   }
 }
