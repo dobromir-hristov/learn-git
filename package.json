@@ -1,6 +1,6 @@
 {
   "name": "learn-git",
-  "version": "4.0.4",
+  "version": "4.0.5",
   "description": "\"# learn-git\"",
   "main": "index.js",
   "dependencies": {},
@@ -32,7 +32,7 @@
   "standard-version": {
     "scripts": {
       "postchangelog": "node version.js && git add README.md",
-      "postcommit": "git commit -m 'chore: Update readme version.'"
+      "postcommit": "git commit -m \"chore: Update readme version.\""
     }
   }
 }
