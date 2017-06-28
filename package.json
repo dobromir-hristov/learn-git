@@ -10,8 +10,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "commit": "git-cz",
+    "postbump" : "node version.js",
+    "precommit" : "git add -A && git commit -m 'chore: update versions'",
     "release": "standard-version",
-    "postrelease": "git push --follow-tags && conventional-github-releaser -p angular"
+    "postrelease": "bump-version && git push --follow-tags && conventional-github-releaser -p angular"
   },
   "repository": {
     "type": "git",
