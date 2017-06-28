@@ -14,6 +14,7 @@
 	export default {
 		data () {
 			return {
+				user: {},
 				data:'some data',
 				query: {
 					name: '',
@@ -29,6 +30,11 @@
 				}, r => {
 					this.$notify(r.body.message, 'error')
 				})
+			}
+		},
+		computed: {
+			isAuthenticated () {
+				return !!this.user.id
 			}
 		}
 	}
