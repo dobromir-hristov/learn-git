@@ -1,6 +1,6 @@
 {
   "name": "learn-git",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "description": "\"# learn-git\"",
   "main": "index.js",
   "dependencies": {},
@@ -10,10 +10,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "commit": "git-cz",
-    "postchangelog": "node version.js",
-    "precommit": "git add README.md",
     "release": "standard-version",
-    "postrelease": "git push --follow-tags && conventional-github-releaser -p angular"
+    "postrelease": "git push --follow-tags",
+    "post-release": "conventional-github-releaser -p angular"
   },
   "repository": {
     "type": "git",
@@ -28,6 +27,12 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "standard-version": {
+    "scripts": {
+      "postchangelog": "node version.js",
+      "precommit": "git add README.md"
     }
   }
 }
