@@ -31,8 +31,8 @@
   },
   "standard-version": {
     "scripts": {
-      "postchangelog": "node version.js",
-      "postcommit": "git add README.md && git commit --amend"
+      "postchangelog": "node version.js && git add README.md",
+      "postcommit": "git commit -m 'chore: Update readme version.'"
     }
   }
 }
