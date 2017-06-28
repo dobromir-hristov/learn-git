@@ -1,5 +1,5 @@
 const fs = require('fs')
-const pack = require('../package.json')
+const pack = require('./package.json')
 
 const readme = fs
   .readFileSync('./README.md', 'utf-8')
