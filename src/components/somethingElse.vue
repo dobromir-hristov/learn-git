@@ -1,12 +1,14 @@
 <template>
 	<div>
-		some element
+		{{ element }}
 	</div>
 </template>
 <script>
 	export default {
 		data () {
-			return {}
+			return {
+				element: ''
+			}
 		}
 	}
 </script>
